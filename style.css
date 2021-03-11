@@ -89,3 +89,25 @@ button:hover {
     font-size: 21px;
     outline: none;
 }
+
+.errorBox {
+    margin-top: 20px;
+    display: flex;
+    display: none;
+}
+
+.errorBox__iconContainer {
+    width: 6%;
+}
+
+.errorBox__errorIcon {
+    width: 100%;
+}
+
+.errorBox__errorMessage {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: red;
+}
