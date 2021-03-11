@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
+<html lang="pl">
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="main.js" defer></script>
+</head>
 
-    <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <script src="main.js" defer></script>
-  </head>
-  <body>
+<body>
   <section class="wrapper">
     <section class="container">
       <div class="container__logo">
         <img src="images/logo.svg" alt="" class="container__logoImg">
       </div>
       <h1 class="container__tittle">
-        <span class="container__tittle--pink">We're</span><br/> 
-        <span>coming </span><br/>
-        <span>soon</span><br/>
-      
+        <span class="container__tittle--pink">We're</span><br />
+        <span>coming </span><br />
+        <span>soon</span><br />
+
       </h1>
 
       <p class="container__description">
@@ -38,28 +33,25 @@
 
       <form class="container__email">
         <p class="email__box">
-          
-          <input
-            class="email__details email__details--js"
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Email Address"
-          />
+          <input class="email__details email__details--js" id="email" name="email" type="email"
+            placeholder="Email Address" />
           <button class="email__details">></button>
-          
         </p>
-       
       </form>
+
       <div class="errorBox">
+        <!--Error message, non-visible, only for JS-->
         <div class="errorBox__iconContainer">
           <img src="images/icon-error.svg" alt="" class="errorBox__errorIcon">
         </div>
         <p class="errorBox__errorMessage"></p>
       </div>
+
     </section>
+    <!--Container for background image-->
     <section class="imageContainer"></section>
-    
+
   </section>
-  </body>
+</body>
+
 </html>
