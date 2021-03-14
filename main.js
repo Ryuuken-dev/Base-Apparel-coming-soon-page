@@ -15,16 +15,14 @@ dataInput.addEventListener('input', () => {
     }
 });
 
-const checkEmailString = function(data) {
-    const emails = ["@o2", "@gmail", "@outlook", "@interia", "@onet", "@wp"];
-}
-
+const emails = ["o2", "gmail", "outlook", "interia", "onet", "wp"];
+   
 const confirmEmail = function (e) {
     e.preventDefault();
     const userData = dataInput.value;
     const lastString = userData.substr(userData.indexOf(`@`));
-    console.log(lastString);
-    if (userData.includes('@') && (userData) && !(userData.endsWith('@')) && !(userData.startsWith('@')) && (lastString.includes('.')) && (lastString.includes('pl'))) {
+    dataModified = lastString.substr(1, lastString.length-4);
+    if (userData.includes('@') && (userData) && !(userData.endsWith('@')) && !(userData.startsWith('@')) && (lastString.includes('.')) && (lastString.includes('pl')) && (emails.includes(dataModified))) {
         return;
     } else if (!(userData)) {
         showError("To pole nie może być puste");
@@ -34,7 +32,7 @@ const confirmEmail = function (e) {
         showError(`Adres e-mail jest niepełny, podaj część po znaku "@"`);
     } else if(userData.startsWith('@')) {
         showError(`Podaj część przed znakiem "@"`); 
-    } else if(!(lastString.includes('.')) || !(lastString.includes('pl'))) {
+    } else if(!(lastString.includes('.')) || !(lastString.includes('pl')) || !(emails.includes(dataModified))) {
         showError(`Tekst występujący po znaku "@" ma niewłaściwy format`);
     } 
         
@@ -45,4 +43,3 @@ const confirmEmail = function (e) {
 acceptButton.addEventListener('click', confirmEmail);
 
 
-// o2.pl, gmail.com, outlook.pl, interia.pl, onet.pl, wp.pl
