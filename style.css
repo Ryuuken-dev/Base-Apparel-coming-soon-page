@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
-/* All styles for 1440px resolution */
+/* All styles for 1440px and 375px resolution */
 * {
     margin: 0;
     padding: 0;
@@ -111,4 +111,63 @@ button:hover {
     align-items: center;
     font-size: 18px;
     color: red;
+}
+
+.container .imageContainer:first-child {
+    display: none;
+}
+
+@media(max-width: 376px) {
+    body, html {
+        --imgWidth: 100%;
+        overflow-x: hidden;
+    }
+   
+    .imageContainer {
+        background-image: url(images/hero-mobile.jpg);
+        height: 250px;
+        margin: 20px 0;
+    }
+
+    .container {
+        height: auto;
+        padding: 80px 0px 20px 0px;
+    }
+
+    button {
+        width: 30%;
+        margin-left: -15%;
+    }
+
+    .container .imageContainer:first-child {
+        display: block;
+        height: 100px;
+    }
+
+    .wrapper .imageContainer:last-child {
+        display: none;
+    }
+
+    .container__tittle {
+        text-align: center;
+    }
+
+    .container__description {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .container__logoImg {
+        padding-left: 30px;
+    }
+
+    .container__logo {
+        width: 50%;
+        margin-bottom: 0;
+    }
+
+    .email__box {
+        padding: 0 10px;
+    }
+    
 }
